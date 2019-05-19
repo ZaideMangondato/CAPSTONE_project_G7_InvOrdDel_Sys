@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A2B41C70-33A1-42C2-8237-80C5A46C8C1D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CAPSTONE_project_G7_InvOrdDel_Sys</RootNamespace>
+    <AssemblyName>CAPSTONE_project_G7_InvOrdDel_Sys</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Available_Vacant_Vehicles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Available_Vacant_Vehicles.Designer.cs">
+      <DependentUpon>Available_Vacant_Vehicles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dbconnect.cs" />
+    <Compile Include="Deliveries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deliveries.Designer.cs">
+      <DependentUpon>Deliveries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delivery_Entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delivery_Entry.Designer.cs">
+      <DependentUpon>Delivery_Entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees_information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees_information.Designer.cs">
+      <DependentUpon>Employees_information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item_Information.Designer.cs">
+      <DependentUpon>Item_Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item_Stocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item_Stocks.Designer.cs">
+      <DependentUpon>Item_Stocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item_Stock_Card_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item_Stock_Card_Info.Designer.cs">
+      <DependentUpon>Item_Stock_Card_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item_Stock_in.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item_Stock_in.Designer.cs">
+      <DependentUpon>Item_Stock_in.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Full_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order_Full_info.Designer.cs">
+      <DependentUpon>Order_Full_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pending.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pending.Designer.cs">
+      <DependentUpon>Pending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Order_Entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order_Entry.Designer.cs">
+      <DependentUpon>Order_Entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Saved_Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Saved_Orders.Designer.cs">
+      <DependentUpon>Saved_Orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_Entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock_Entry.Designer.cs">
+      <DependentUpon>Stock_Entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_Entry_Logs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock_Entry_Logs.Designer.cs">
+      <DependentUpon>Stock_Entry_Logs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_In_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock_In_Information.Designer.cs">
+      <DependentUpon>Stock_In_Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier_Information.Designer.cs">
+      <DependentUpon>Supplier_Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicle_Information.Designer.cs">
+      <DependentUpon>Vehicle_Information.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Available_Vacant_Vehicles.resx">
+      <DependentUpon>Available_Vacant_Vehicles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deliveries.resx">
+      <DependentUpon>Deliveries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delivery_Entry.resx">
+      <DependentUpon>Delivery_Entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees_information.resx">
+      <DependentUpon>Employees_information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item_Information.resx">
+      <DependentUpon>Item_Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item_Stocks.resx">
+      <DependentUpon>Item_Stocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item_Stock_Card_Info.resx">
+      <DependentUpon>Item_Stock_Card_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item_Stock_in.resx">
+      <DependentUpon>Item_Stock_in.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order_Full_info.resx">
+      <DependentUpon>Order_Full_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pending.resx">
+      <DependentUpon>Pending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Order_Entry.resx">
+      <DependentUpon>Order_Entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Saved_Orders.resx">
+      <DependentUpon>Saved_Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock_Entry.resx">
+      <DependentUpon>Stock_Entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock_Entry_Logs.resx">
+      <DependentUpon>Stock_Entry_Logs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock_In_Information.resx">
+      <DependentUpon>Stock_In_Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier_Information.resx">
+      <DependentUpon>Supplier_Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicle_Information.resx">
+      <DependentUpon>Vehicle_Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
